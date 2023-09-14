@@ -14,8 +14,8 @@ import git from './../assets/Te10.png'
 function Home() {
   return (
     <VStack>
-    <VStack w="1200px" color="whiteAlpha.700" >
-        <VStack m="250px 0px" p="10px" bgColor="#0009b92a" borderRadius="40px">
+    <VStack w="1200px" color="whiteAlpha.900" >
+        <VStack m="200px 0px" p="10px" bgColor="#0009b92a" borderRadius="40px">
         <HStack position="relative" >
             <Box borderRadius="45%" bgColor="#5e32af50" position="absolute" left="0px" zIndex='5' m="20px" w="300px" h="300px">
                 
@@ -23,8 +23,10 @@ function Home() {
             <Image m="20px" src={foto} alt="abel moreno" w="300px" objectFit="cover" />
             <VStack>
             <Heading>Abel Moreno - Full Stack Developer</Heading>
-            <Text w="70%">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, magnam eos porro hic excepturi numquam veritatis. Suscipit aliquid et unde velit iste doloremque magnam dolor, error voluptatibus necessitatibus aperiam porro!</Text>
-            
+            <Text w="80%" textAlign="start" fontSize="19px">Bienvenido a mi sitio web, aqui podras ver mis proyectos, habilidades, experimentos y mas.</Text>
+            <Text w="80%" textAlign="start" fontSize="19px">Estaría encantado de conocerte, abajo están mis datos de contacto. Gracias por tu tiempo.</Text>
+            <Text w="80%" textAlign="start" fontSize="19px">E-mail: abelyamilmorenomp@gmail.com</Text>
+            <Text w="80%" textAlign="start" fontSize="19px">Whatsapp: +54 9 3513851480</Text>
             </VStack>
         </HStack>
 <HStack>
@@ -53,22 +55,22 @@ function Home() {
         </HStack>
        
         <HStack m="50px 0px" justify="space-between" gap="10px">
-            <VStack p="10px" bgColor="#0009b92a" h="200px" w="30%" >
-                <Link to="/exp">
-                <Heading>Experiencias</Heading>
-                <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore distinctio natus rerum s delectus consequuntur voluptatibus nesciunt aliquam!</Text>
+            <VStack p="10px" bgColor="#0009b92a" h="200px" w="30%" transition=".5s ease" _hover={{backgroundColor:'#5b5e967e',borderRadius:'15px', cursor:'pointer',width:'40%',opacity:'1',filter:'contrast(120%)'}} >
+                <Link to="/cert">
+                <Heading>Certificados</Heading>
+                <Text m="10px" fontSize="18px" w="350px">Certificados obtenidos en bootcamps, cursos y otras capacitaciones.</Text>
                 </Link>
             </VStack>
-            <VStack p="10px" bgColor="#0009b92a" h="200px" w="300px" >
+            <VStack p="10px" bgColor="#0009b92a" h="200px" w="30%" transition=".5s ease" _hover={{backgroundColor:'#5b5e967e',borderRadius:'15px', cursor:'pointer',width:'40%',opacity:'1',filter:'contrast(120%)'}} >
                 <Link to="/proyects">
                 <Heading>Proyectos</Heading>
-                <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore distinctio natus rerum s delectus consequuntur voluptatibus nesciunt aliquam!</Text>
+                <Text m="10px" fontSize="18px" w="350px">Proyectos con una mirada completa e integral y propuesta al usuario</Text>
                 </Link>
             </VStack>
-            <VStack p="10px" bgColor="#0009b92a" h="200px" w="300px" >
-                <Link to="/LABS">
+            <VStack p="10px" bgColor="#0009b92a" h="200px" w="30%" transition=".5s ease" _hover={{backgroundColor:'#5b5e967e',borderRadius:'15px', cursor:'pointer',width:'40%',opacity:'1',filter:'contrast(120%)'}} >
+                <Link to="/labs">
                 <Heading>LABS</Heading>
-                <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore distinctio natus rerum s delectus consequuntur voluptatibus nesciunt aliquam!</Text>
+                <Text m="10px" fontSize="18px" w="350px">Proyectos aislados para prueba de tecnologias nuevas, pequeños y sin impacto pero valiosos en terminos de exploracion de codigo</Text>
                 </Link>
             </VStack>
         </HStack>
