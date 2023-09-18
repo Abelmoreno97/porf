@@ -1,5 +1,5 @@
 import { HStack, Text, Image } from "@chakra-ui/react";
-import foto from "./../assets/foto.png";
+
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 function NavBar() {
@@ -30,7 +30,7 @@ function NavBar() {
       zIndex="2"
       h="60px"
       w="1200px"
-      justify="center"
+      justify="space-around"
       transition={".5s ease"}
       _hover={{ bgColor: "purple.800" }}
     >
@@ -40,7 +40,7 @@ function NavBar() {
             transition={".5s ease"}
             _hover={{ cursor: "pointer", transform: "scale(1.2, 1.2)" }}
           >
-            <Image src={foto} alt="abel moreno" w="50px" />
+            <Image src="https://199-ph.s3.sa-east-1.amazonaws.com/foto.png" alt="abel moreno" w="50px" />
             <Text>Ir al inicio</Text>
           </HStack>
         </Link>

@@ -1,4 +1,4 @@
-import { VStack, Heading, Text, HStack, Image} from "@chakra-ui/react";
+import { VStack, Heading, Text, HStack, Image, SimpleGrid} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import db from "../db";
 function Labs() {
@@ -10,7 +10,8 @@ function Labs() {
         Proyectos aislados para prueba de tecnologias nuevas, pequeños y sin
         impacto pero valiosos en terminos de exploracion de codigo.
       </Text>
-      <HStack m="50px 0px" justify="space-around" gap="10px">
+      <HStack m="50px 0px" justify="center">
+      <SimpleGrid columns={2} spacing={10}>
       {db[2].map((db) => (
           <VStack
             p="10px"
@@ -33,6 +34,7 @@ function Labs() {
             </Text>
           </VStack>
         ))}
+        </SimpleGrid>
         </HStack>
     </VStack>
   );

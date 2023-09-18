@@ -1,4 +1,4 @@
-import { VStack, Heading, Text, HStack, Image} from "@chakra-ui/react";
+import { VStack, Heading, Text, HStack, Image, SimpleGrid} from "@chakra-ui/react";
 import db from "../db";
 import { Link } from "react-router-dom";
 
@@ -11,13 +11,15 @@ function Cert() {
       <Text w="350px">
         Certificados obtenidos en bootcamps, cursos y otras capacitaciones.
       </Text>
-      <HStack m="50px 0px" justify="space-around" gap="10px">
+      <HStack m="50px 0px" justify="center">
+      <SimpleGrid columns={2} spacing={10}>
       {db[1].map((db) => (
           <VStack
+          justify="space-around"
             p="10px"
             bgColor="#0009b92a"
-            h="320px"
-            w="320px"
+            h="450px"
+            w="330px"
             transition=".5s ease"
             _hover={{
               backgroundColor: "#5b5e967e",
@@ -29,11 +31,14 @@ function Cert() {
             }}
           >
             <Heading>{db.name}</Heading>
+            <HStack w="250px" h="200px" justify="center"><Image src={db.img} alt={db.name} /></HStack>
+            
             <Text m="10px" fontSize="18px" w="350px">
               {db.description}
             </Text>
           </VStack>
         ))}
+      </SimpleGrid>
         </HStack>
     </VStack>
   );

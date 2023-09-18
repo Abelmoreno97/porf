@@ -1,24 +1,11 @@
 import { HStack, Image, VStack, Text, Heading, Box } from "@chakra-ui/react";
-import NavBar from "../components/NavBar";
-import foto from "./../assets/foto.png";
 import { Link } from "react-router-dom";
-import asp from "./../assets/asp.net.logo.png";
-import csharp from "./../assets/Csharp_Logo.png";
-import sqlserver from "./../assets/mssql-server.png";
-import js from "./../assets/Te1.png";
-import node from "./../assets/Te2.png";
-import sql from "./../assets/Te3.png";
-import html from "./../assets/Te7.png";
-import react from "./../assets/Te8.png";
-import postgre from "./../assets/Te9.png";
-import git from "./../assets/Te10.png";
+import db from "../db";
 function Home() {
   return (
     <VStack>
       <VStack w="1200px" color="whiteAlpha.900">
-    
-
-        <VStack m="200px 0px" p="10px" bgColor="#0009b92a" borderRadius="40px">
+        <VStack m="170px 0px" p="10px" bgColor="#0009b92a" borderRadius="40px">
           {/* ------------------<Heading>Abel Moreno - Full Stack Developer</Heading>------------------------- */}
           <HStack position="relative">
             <Box
@@ -33,7 +20,7 @@ function Home() {
             ></Box>
             <Image
               m="20px"
-              src={foto}
+              src="https://199-ph.s3.sa-east-1.amazonaws.com/foto.png"
               alt="abel moreno"
               w="300px"
               objectFit="cover"
@@ -58,247 +45,58 @@ function Home() {
           </HStack>
           {/* ------------------------ Barra animada de tecnologias/iconos/imagenes AGREGAR MAS ICONOS--------------------------- */}
           <HStack>
-            <HStack w="400px" h="120px" bgColor="blackAlpha.500">
-              <Image
-                src={asp}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={csharp}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={sql}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={sqlserver}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={postgre}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-            </HStack>
-            <HStack w="400px" h="120px" bgColor="blackAlpha.500">
-              <Image
-                src={js}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={react}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={node}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={git}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
-              <Image
-                src={html}
-                w="0px"
-                flexGrow="1"
-                objectFit="cover"
-                opacity=".8"
-                transition=".5s ease"
-                _hover={{
-                  backgroundColor: "#5b5e967e",
-                  borderRadius: "15px",
-                  cursor: "crosshair",
-                  width: "100px",
-                  opacity: "1",
-                  filter: "contrast(120%)",
-                }}
-              />
+            <HStack w="900px" h="120px" bgColor="blackAlpha.500">
+              {db[3].map((db) => (
+                <Image
+                  src={db.img}
+                  w="0px"
+                  flexGrow="1"
+                  objectFit="cover"
+                  opacity=".8"
+                  transition=".5s ease"
+                  _hover={{
+                    backgroundColor: "#5b5e967e",
+                    borderRadius: "15px",
+                    cursor: "crosshair",
+                    width: "100px",
+                    opacity: "1",
+                    filter: "contrast(120%)",
+                  }}
+                />
+              ))}
             </HStack>
           </HStack>
         </VStack>
         {/* ------------------------------- Seecion cards -------------------------------*/}
-        <HStack m="50px 0px">
+        <HStack m="30px 0px">
           <Heading>En mas detalle</Heading>
         </HStack>
 
         <HStack m="50px 0px" justify="space-between" gap="10px">
-          <VStack
-            p="10px"
-            bgColor="#0009b92a"
-            h="200px"
-            w="30%"
-            transition=".5s ease"
-            _hover={{
-              backgroundColor: "#5b5e967e",
-              borderRadius: "15px",
-              cursor: "pointer",
-              width: "40%",
-              opacity: "1",
-              filter: "contrast(120%)",
-            }}
-          >
-            <Link to="/cert">
-              <Heading>Certificados</Heading>
-              <Text m="10px" fontSize="18px" w="350px">
-                Certificados obtenidos en bootcamps, cursos y otras
-                capacitaciones.
-              </Text>
-            </Link>
-          </VStack>
-          <VStack
-            p="10px"
-            bgColor="#0009b92a"
-            h="200px"
-            w="30%"
-            transition=".5s ease"
-            _hover={{
-              backgroundColor: "#5b5e967e",
-              borderRadius: "15px",
-              cursor: "pointer",
-              width: "40%",
-              opacity: "1",
-              filter: "contrast(120%)",
-            }}
-          >
-            <Link to="/proyects">
-              <Heading>Proyectos</Heading>
-              <Text m="10px" fontSize="18px" w="350px">
-                Proyectos con una mirada completa e integral y propuesta al
-                usuario
-              </Text>
-            </Link>
-          </VStack>
-          <VStack
-            p="10px"
-            bgColor="#0009b92a"
-            h="200px"
-            w="30%"
-            transition=".5s ease"
-            _hover={{
-              backgroundColor: "#5b5e967e",
-              borderRadius: "15px",
-              cursor: "pointer",
-              width: "40%",
-              opacity: "1",
-              filter: "contrast(120%)",
-            }}
-          >
-            <Link to="/labs">
-              <Heading>LABS</Heading>
-              <Text m="10px" fontSize="18px" w="350px">
-                Proyectos aislados para prueba de tecnologias nuevas, pequeños y
-                sin impacto pero valiosos en terminos de exploracion de codigo
-              </Text>
-            </Link>
-          </VStack>
+          {db[4].map((db) => (
+            <VStack
+              p="10px"
+              bgColor="#0009b92a"
+              h="200px"
+              w="30%"
+              transition=".5s ease"
+              _hover={{
+                backgroundColor: "#5b5e967e",
+                borderRadius: "15px",
+                cursor: "pointer",
+                width: "40%",
+                opacity: "1",
+                filter: "contrast(120%)",
+              }}
+            >
+              <Link to={db.src}>
+                <Heading>{db.name}</Heading>
+                <Text m="10px" fontSize="18px" w="350px">
+                  {db.description}
+                </Text>
+              </Link>
+            </VStack>
+          ))}
         </HStack>
       </VStack>
     </VStack>
