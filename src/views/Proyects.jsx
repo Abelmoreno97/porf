@@ -29,7 +29,7 @@ function Proyects() {
             }}
           >
             <Heading>{db.name}</Heading>
-            <Image borderRadius="10px" src={db.img} alt={db.name} w="300px" h="250px"/>
+            <Image objectFit="contain" borderRadius="10px" src={db.img} alt={db.name} w="300px" h="250px"/>
             <Text  m="10px" fontSize="18px" w="300px">
               {db.description}
             </Text>

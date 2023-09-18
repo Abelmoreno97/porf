@@ -29,11 +29,10 @@ const db = [
   // LABS
 
   [
-    { name: "LABSproyects", description: "lorem ipsum dolor sit amet" },
-    { name: "LABSlabs", description: "lorem ipsum dolor sit amet" },
-    { name: "LABSlabs", description: "lorem ipsum dolor sit amet" },
-    { name: "LABSlabs", description: "lorem ipsum dolor sit amet" },
-    { name: "LABSlabs", description: "lorem ipsum dolor sit amet" },
+    { name: "CRUD .NET - MSSQL",img:"https://199-ph.s3.sa-east-1.amazonaws.com/image+(3).png", description: "lorem ipsum dolor sit amet" },
+    { name: "CRUD REACT-NODE-MSSQL",img:"https://199-ph.s3.sa-east-1.amazonaws.com/mssql+node+react.png", description: "lorem ipsum dolor sit amet" },
+    { name: "PORTFOLIO ANGULAR",img:"https://199-ph.s3.sa-east-1.amazonaws.com/ScreenShot_20230918110502.jpeg", description: "lorem ipsum dolor sit amet" },
+  
   ],
 
   //   BUCKET DE IMAGENES

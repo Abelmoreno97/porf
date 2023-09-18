@@ -14,10 +14,11 @@ function Labs() {
       <SimpleGrid columns={2} spacing={10}>
       {db[2].map((db) => (
           <VStack
-            p="10px"
+          justify="space-around"
+            p="15px"
             bgColor="#0009b92a"
-            h="320px"
-            w="320px"
+            h="450px"
+            w="330px"
             transition=".5s ease"
             _hover={{
               backgroundColor: "#5b5e967e",
@@ -29,7 +30,8 @@ function Labs() {
             }}
           >
             <Heading>{db.name}</Heading>
-            <Text m="10px" fontSize="18px" w="350px">
+            <Image objectFit="contain" borderRadius="10px" src={db.img} alt={db.name} w="300px" h="250px"/>
+            <Text  m="10px" fontSize="18px" w="300px">
               {db.description}
             </Text>
           </VStack>
